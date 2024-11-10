@@ -1,3 +1,7 @@
+/**
+ * An enumerated value corresponding
+ * to a token.
+ */
 enum TOKEN {
     LEFT_PAREN,
     RIGHT_PAREN,
