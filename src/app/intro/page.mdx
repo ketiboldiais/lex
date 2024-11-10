@@ -1,3 +1,18 @@
+# Lex
+This is the documentation page for Lex.
+
+## Tokens
+To parse language input, Lex's tokenizer begins by reading each character one by one. The tokenizer looks for character sequences -- substrings of the input -- that have a specified meaning. These sequences are called _lexemes_. For example, the input:
+
+~~~tsx
+let y = 1;
+~~~
+
+comprises five lexemes: `let`, `y`, `=`, `1`, and `;`.
+
+These tokens are defined by an enum:
+
+```tsx
 /**
  * An enumerated value corresponding
  * to a token.
@@ -46,37 +61,5 @@ enum TOKEN {
     ERROR, // Utility token for an error
     EOF // Utility token for end-of-file
 }
-
-class Erratum {
-    
-}
-
-type Primitive = number | boolean | string | null;
-
-class Token {
-    type: Token;
-    lexeme: string;
-    line: number;
-    literal: Primitive;
-    constructor(
-        type: Token, 
-        lexeme:string,
-        line: number,
-        literal: Primitive,
-    ) {
-        this.type=type;
-        this.lexeme=lexeme;
-        this.line=line;
-        this.literal=literal;
-    }
-}
-
-function scan(source: string) {
-    let start = 0;
-    let current = 0;
-    let line = 1;
-}
-
-export const scanner = (source:string) => {
-    return source;
-}
+```
+ 
